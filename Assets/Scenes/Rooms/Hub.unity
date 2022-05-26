@@ -1249,8 +1249,9 @@ AudioSource:
   m_GameObject: {fileID: 614054494}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0df13d7ba0582f24aac5bfd970192377, type: 3}
+  OutputAudioMixerGroup: {fileID: -2713592165268315069, guid: d57c03d05a301f54cac404a92c3d3f21,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 93cd1e6f2e1b383479fbde32c6714f18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1842,8 +1843,9 @@ AudioSource:
   m_GameObject: {fileID: 948966815}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3d5eecf31f33d6345af8c73ba43dac78, type: 3}
+  OutputAudioMixerGroup: {fileID: -2713592165268315069, guid: d57c03d05a301f54cac404a92c3d3f21,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 1224720d846fae342947afe214a70ed8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3162,6 +3164,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breakable Chair (Button)
       objectReference: {fileID: 0}
+    - target: {fileID: 8805772205880594585, guid: 7c6858c8a6df03b40991b0d2cf09bffb,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f95dd040172ce714d851ad9a19b5678b, type: 3}
+    - target: {fileID: 8805772205880594585, guid: 7c6858c8a6df03b40991b0d2cf09bffb,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2713592165268315069, guid: d57c03d05a301f54cac404a92c3d3f21,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c6858c8a6df03b40991b0d2cf09bffb, type: 3}
 --- !u!224 &1709557714 stripped
@@ -3440,7 +3453,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fff222f7da70b1c42b69d8b333aa2e8d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
