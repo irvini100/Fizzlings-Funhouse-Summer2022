@@ -2921,7 +2921,7 @@ GameObject:
   - component: {fileID: 1305068888}
   - component: {fileID: 1305068887}
   m_Layer: 0
-  m_Name: MatchingGameThemeFINAL
+  m_Name: DrawingMiniGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2938,7 +2938,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 639779137499446421, guid: d57c03d05a301f54cac404a92c3d3f21,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: f85b58502d5ec884b860ba20eac71fb9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 04200afb527bb3d46b52c4c7293e9ca4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
