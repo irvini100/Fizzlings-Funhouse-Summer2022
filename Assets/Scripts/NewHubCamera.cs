@@ -18,12 +18,14 @@ public class NewHubCamera : MonoBehaviour
     private bool isClickedLeft = false;
     private bool isClickedUp = false;
     private bool isClickedDown = false;
+    //int for doorpoints/math
     private int DoorPoint = 0;
+    //serialized fields to instantiate the buttons so that I can make them inactive
     [SerializeField] private Button ButtonLeft = null;
     [SerializeField] private Button ButtonRight = null;
     [SerializeField] private Button ButtonUp = null;
     [SerializeField] private Button ButtonDown = null;
-
+    //bools for reaching the max left or right/stairs/roof 
     private bool cameraReachedMax = false;
     private bool cameraReachedStairs = false;
     private bool cameraReachedRoof = false;
@@ -85,23 +87,23 @@ public class NewHubCamera : MonoBehaviour
                         cameraReachedPosition = false;
                         if(cameraReachedPosition == false)
                         {
-                        ButtonLeft.gameObject.SetActive(false);
-                        ButtonRight.gameObject.SetActive(false);
-                        ButtonUp.gameObject.SetActive(false); 
+                            ButtonLeft.gameObject.SetActive(false);
+                            ButtonRight.gameObject.SetActive(false);
+                            ButtonUp.gameObject.SetActive(false); 
+                        
                         }
                     }                    
                     
                     //Set bool to true and reenable buttons when destination reached
-                    if (Vector3.Distance(gameObject.transform.position, cameraTransforms[DoorPoint + 1].transform.position) <= 0.001f)
+                    else
                     {
                         cameraReachedPosition = true;
                         if(cameraReachedPosition == true)
                         {
-                        DoorPoint ++;
-                        isClickedRight = false;
-                        ButtonLeft.gameObject.SetActive(true);
-                        ButtonRight.gameObject.SetActive(true);
-                        ButtonUp.gameObject.SetActive(true);                        
+                            DoorPoint ++;
+                            isClickedRight = false;
+                            ButtonLeft.gameObject.SetActive(true);
+                            ButtonRight.gameObject.SetActive(true);                     
                         }
                     }
 
@@ -109,7 +111,7 @@ public class NewHubCamera : MonoBehaviour
                     if(DoorPoint >= 8)
                     {
                         cameraReachedMax = true;
-                        if(cameraReachedMax == true)
+                        if(cameraReachedMax == true && cameraReachedPosition == true)
                         {
                             ButtonRight.gameObject.SetActive(false);
                         } 
@@ -145,31 +147,31 @@ public class NewHubCamera : MonoBehaviour
                         cameraReachedPosition = false;
                         if(cameraReachedPosition == false)
                         {
-                        ButtonLeft.gameObject.SetActive(false);
-                        ButtonRight.gameObject.SetActive(false);
-                        ButtonUp.gameObject.SetActive(false);
-                        ButtonDown.gameObject.SetActive(false);
+                            ButtonLeft.gameObject.SetActive(false);
+                            ButtonRight.gameObject.SetActive(false);
+                            ButtonUp.gameObject.SetActive(false);
+                            ButtonDown.gameObject.SetActive(false);
                         }
                     }
                     
                     //Set bool to true and reenable buttons when destination reached
-                    if (Vector3.Distance(gameObject.transform.position, cameraTransforms[DoorPoint - 1].transform.position) <= 0.001f)
+                    else
                     {
                         cameraReachedPosition = true;
                         if(cameraReachedPosition == true)
                         {
-                        DoorPoint--;
-                        isClickedLeft = false;
-                        ButtonLeft.gameObject.SetActive(true);
-                        ButtonRight.gameObject.SetActive(true);
-                        ButtonUp.gameObject.SetActive(true);
+                            DoorPoint--;
+                            isClickedLeft = false;
+                            ButtonLeft.gameObject.SetActive(true);
+                            ButtonRight.gameObject.SetActive(true);
+                            ButtonUp.gameObject.SetActive(true);
                         }
                     } 
                     //sests the left button to inactive if the player is unable to go left anymore.
-                     if(DoorPoint > 0)
+                    if(DoorPoint > 0)
                     {
                         cameraReachedMax = true;
-                        if(cameraReachedMax == true)
+                        if(cameraReachedMax == true && cameraReachedPosition == true)
                         {
                             ButtonLeft.gameObject.SetActive(true);
                         } 
@@ -191,7 +193,7 @@ public class NewHubCamera : MonoBehaviour
                 if(isClickedUp == true)
                 {
                     start = cameraTransforms[DoorPoint].transform.position;
-                //gets distances
+                    //gets distances
                     float totalDistance = Vector3.Distance(start, cameraTransforms[DoorPoint + 2].transform.position);
                     float currentDistance = Vector3.Distance(gameObject.transform.position, cameraTransforms[DoorPoint + 2].transform.position);
                     
@@ -210,27 +212,31 @@ public class NewHubCamera : MonoBehaviour
                         cameraReachedPosition = false;
                         if(cameraReachedPosition == false)
                         {
-                        ButtonLeft.gameObject.SetActive(false);
-                        ButtonRight.gameObject.SetActive(false);
-                        ButtonUp.gameObject.SetActive(false);
-                        ButtonDown.gameObject.SetActive(false);
+                            ButtonLeft.gameObject.SetActive(false);
+                            ButtonRight.gameObject.SetActive(false);
+                            ButtonUp.gameObject.SetActive(false);
+                            ButtonDown.gameObject.SetActive(false);
                         }
                     }                    
                     
                     //Set bool to true and reenable buttons when destination reached
-                    if (Vector3.Distance(gameObject.transform.position, cameraTransforms[DoorPoint + 2].transform.position) <= 0.001f)
+                    else
                     {
                         cameraReachedPosition = true;
                         if(cameraReachedPosition == true)
                         {
-                        DoorPoint += 2;
-                        isClickedUp = false;
-                        ButtonLeft.gameObject.SetActive(true);
-                        ButtonRight.gameObject.SetActive(true);
-                        ButtonUp.gameObject.SetActive(true);                                           
+                            DoorPoint += 2;
+                            isClickedUp = false;
+                            ButtonLeft.gameObject.SetActive(true);
+                            ButtonRight.gameObject.SetActive(true);
+                            ButtonUp.gameObject.SetActive(true);                                           
                         }
                     }
                 }
+            }
+            if(cameraReachedPosition == false)
+            {
+                ButtonUp.gameObject.SetActive(false);
             }
             
         }
@@ -253,44 +259,44 @@ public class NewHubCamera : MonoBehaviour
                 {
                     start = cameraTransforms[DoorPoint].transform.position;
                     //gets distances
-                        float totalDistance = Vector3.Distance(start, cameraTransforms[DoorPoint - 2].transform.position);
-                        float currentDistance = Vector3.Distance(gameObject.transform.position, cameraTransforms[DoorPoint - 2].transform.position);
+                    float totalDistance = Vector3.Distance(start, cameraTransforms[DoorPoint - 2].transform.position);
+                    float currentDistance = Vector3.Distance(gameObject.transform.position, cameraTransforms[DoorPoint - 2].transform.position);
                         
-                        // Convert distance to 0.0 through 1.0 to compare to X value on animation graph 
-                        float speedBasedOnPosition = currentDistance / totalDistance;
+                    // Convert distance to 0.0 through 1.0 to compare to X value on animation graph 
+                    float speedBasedOnPosition = currentDistance / totalDistance;
 
-                        // Get Y value on animation graph for speed. 1f - cameraFlySpeed ensures graph is read from left to right for designers
-                        float currentSpeed = cameraFlySpeed.Evaluate(1f - speedBasedOnPosition);
+                    // Get Y value on animation graph for speed. 1f - cameraFlySpeed ensures graph is read from left to right for designers
+                    float currentSpeed = cameraFlySpeed.Evaluate(1f - speedBasedOnPosition);
                         
-                        // MoveTowards next waypoint at currentSpeed
-                        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, cameraTransforms[DoorPoint - 2].transform.position, Time.deltaTime * currentSpeed);
+                    // MoveTowards next waypoint at currentSpeed
+                    gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, cameraTransforms[DoorPoint - 2].transform.position, Time.deltaTime * currentSpeed);
                         
-                        //sets bool to false and disables the buttons while moving
-                        if(Vector3.Distance(gameObject.transform.position, cameraTransforms[DoorPoint - 2].transform.position) >= 0.001f)
+                    //sets bool to false and disables the buttons while moving
+                    if(Vector3.Distance(gameObject.transform.position, cameraTransforms[DoorPoint - 2].transform.position) >= 0.001f)
+                    {
+                        cameraReachedPosition = false;
+                        if(cameraReachedPosition == false)
                         {
-                            cameraReachedPosition = false;
-                            if(cameraReachedPosition == false)
-                            {
                             ButtonLeft.gameObject.SetActive(false);
                             ButtonRight.gameObject.SetActive(false);
                             ButtonUp.gameObject.SetActive(false);
                             ButtonDown.gameObject.SetActive(false);  
-                            }
-                        }                    
+                        }
+                    }                    
                         
                         //Set bool to true and reenable buttons when destination reached
-                        if (Vector3.Distance(gameObject.transform.position, cameraTransforms[DoorPoint - 2].transform.position) <= 0.001f)
+                    else
+                    {
+                        cameraReachedPosition = true;
+                        if(cameraReachedPosition == true)
                         {
-                            cameraReachedPosition = true;
-                            if(cameraReachedPosition == true)
-                            {
                             DoorPoint -= 2;
                             isClickedDown = false;
                             ButtonLeft.gameObject.SetActive(true);
                             ButtonRight.gameObject.SetActive(true);
                             ButtonUp.gameObject.SetActive(true);                        
-                            }
                         }
+                    }
                 }
             }
         }

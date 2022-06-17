@@ -37,6 +37,15 @@ TagManager:
   - Verbs
   - BrushPaint
   - CameraButton
+  - ArtDoor
+  - FarmDoor
+  - HangarDoor
+  - MusicDoor
+  - LibraryDoor
+  - OceanDoor
+  - TrophyDoor
+  - GarageDoor
+  - HotAirBalloon
   layers:
   - Default
   - TransparentFX
