@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DogAnimation
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings: []
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0.36666667
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 6c8a591ac5bdd3b49b97da1baa85de25,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.033333335
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 4885568cf1791a7488ae671f9654749b,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.06666667
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 970aae950fa377842a3235dae4f20f8e,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.1
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 5c31ec7dffac611438483d9121fa1ca2,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.13333334
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 0563b7ce93a154d4ea0594848160b824,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.16666667
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: a69ae24ae04f9f244b166dc36688cb9a,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.2
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 4656245e4b4109b4cbab2cc60942b516,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.23333333
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 42e2a6eaaa62b434786212eb29d24ee1,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.26666668
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 6c443f0109c9d8d44b0f3ef71c9611b6,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.3
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 0fc2027a8bcba124698fb544ae9a8f1e,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: 7bdccb1547a55ee489fe7c611ac6ec8b,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.36666667
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 21300000, guid: aa5b9eb490104174fae7411ca98e4fea,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
