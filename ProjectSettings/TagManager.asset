@@ -36,6 +36,16 @@ TagManager:
   - Adjectives
   - Verbs
   - BrushPaint
+  - CameraButton
+  - ArtDoor
+  - FarmDoor
+  - HangarDoor
+  - MusicDoor
+  - LibraryDoor
+  - OceanDoor
+  - TrophyDoor
+  - GarageDoor
+  - HotAirBalloon
   layers:
   - Default
   - TransparentFX
@@ -43,7 +53,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Doors
   - 
   - Stop Movement
   - Walls
@@ -72,4 +82,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2598385019
+    locked: 0
+  - name: Doors
+    uniqueID: 2322290407
     locked: 0
