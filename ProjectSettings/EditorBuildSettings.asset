@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame Scenes/Hangar Room/Galactic Diplomacy Minigame.unity
     guid: 72dc621194bb91b43bbcb00c3c880e0a
   - enabled: 1
-    path: Assets/Scenes/Rooms/Art Gallery.unity
+    path: Assets/Scenes/Rooms/Archive/Art Gallery.unity
     guid: 60fbd2c5f783d524ca4d44290c574337
   - enabled: 1
     path: Assets/Scenes/Minigame Scenes/Music Room/Music Rhythm.unity
