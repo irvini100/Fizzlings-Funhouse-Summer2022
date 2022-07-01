@@ -68,7 +68,7 @@ public class MatchingUIManager : MonoBehaviour
     // Load Art Gallery Scene
     public void openArtGallery()
     {
-        SceneManager.LoadScene("Art Gallery");
+        SceneManager.LoadScene("Art Room");
     }
 
     // Closes all menus except for level selector

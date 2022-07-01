@@ -45,7 +45,7 @@ public class HubClicks : MonoBehaviour
                     Debug.Log("Hit " + hit.collider.tag);
                     if(hit.collider.tag == "ArtDoor")
                     {
-                        SceneManager.LoadScene("Art Gallery");
+                        SceneManager.LoadScene("Art Room");
                     }                           
                     else if(hit.collider.tag == "FarmDoor")
                     {
