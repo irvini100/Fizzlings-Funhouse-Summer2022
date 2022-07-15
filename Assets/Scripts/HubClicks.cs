@@ -49,7 +49,7 @@ public class HubClicks : MonoBehaviour
                     }                           
                     else if(hit.collider.tag == "FarmDoor")
                     {
-                        SceneManager.LoadScene("Zoo");
+                        SceneManager.LoadScene("NewZoo");
                     }
                     else if(hit.collider.tag == "HangarDoor")
                     {

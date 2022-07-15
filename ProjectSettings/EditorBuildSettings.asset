@@ -33,9 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame Scenes/Music Room/Music Rhythm.unity
     guid: 92f373d073434a3469b864dcdc9b13d4
   - enabled: 1
-    path: Assets/Scenes/Rooms/Zoo.unity
-    guid: fbdf0c634d784b24a95e55a6cf920c4f
-  - enabled: 1
     path: Assets/Scenes/Minigame Scenes/Zoo Room/Animal Sound Trivia.unity
     guid: a142af6ab8ed6054e95bc5e88d1eaece
   - enabled: 1
@@ -95,4 +92,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigame Scenes/Art Gallery/MatchingGame.unity
     guid: 2a02ff3efd50348438bbf6999fb1b9c8
+  - enabled: 1
+    path: Assets/Scenes/Rooms/NewZoo.unity
+    guid: 538ac7eddf9624a429bedc5d3ea8d5e0
   m_configObjects: {}
