@@ -13,6 +13,7 @@ public class MatchingUIManager : MonoBehaviour
     public GameObject WinMenu;
     // Score text for when player is on final level
     public GameObject ScoreText;
+    public GameObject ScoreImage;
     // List of buttons for selecting level
     public List<GameObject> levelSelectButtons;
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class MatchingUIManager : MonoBehaviour
         LevelSelector.SetActive(false);
         WinMenu.SetActive(false);
         ScoreText.SetActive(false);
+        ScoreImage.SetActive(false);
 
         // Disable levelSelectButtons based on how much progress the user hasn't made
         if (PlayerPrefs.HasKey("MatchingGameProgress"))
@@ -61,7 +63,8 @@ public class MatchingUIManager : MonoBehaviour
         OnScreenUI.SetActive(true);
         LevelSelector.SetActive(false);
         WinMenu.SetActive(false);
-        ScoreText.SetActive(false);
+        ScoreText.SetActive(true);
+        ScoreImage.SetActive(true);
         Camera.main.GetComponent<CameraMovement>().startClicked = true;
     }
 
