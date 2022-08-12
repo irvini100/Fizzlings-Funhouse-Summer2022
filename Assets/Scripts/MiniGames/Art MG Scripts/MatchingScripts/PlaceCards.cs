@@ -14,9 +14,10 @@ public class PlaceCards : MonoBehaviour
     public GameObject LevelSelector;
     public GameObject OpenLevelSelector;
     public GameObject BackButton;
-    // Get Score text so we can increment it and display it on level 6
+    // Get Score text so we can increment it and display it on level 1
     public GameObject ScoreText;
     public int score = 0;
+    public GameObject ScoreImage;
 
     // Card Prefab to spawn
     public GameObject defaultCard;
@@ -154,7 +155,7 @@ public class PlaceCards : MonoBehaviour
         foreach (RaycastResult result in results)
         {
             if (result.gameObject.name == BackButton.name || result.gameObject.name == OpenLevelSelector.name || result.gameObject.name == StartMenu.name || result.gameObject.name == WinMenu.name || result.gameObject.name == LevelSelector.name
-                || result.gameObject.name == ScoreText.name)
+                || result.gameObject.name == ScoreText.name || result.gameObject.name == ScoreImage.name)
             {
                 return true;
             }
@@ -278,8 +279,8 @@ public class PlaceCards : MonoBehaviour
                                         }
                                         firstCard.matched = true;
                                         secondCard.matched = true;
-                                        // increment score if level == 6
-                                        if (gameObject.GetComponent<CameraMovement>().level == 6)
+                                        // increment score if level >= 1
+                                        if (gameObject.GetComponent<CameraMovement>().level >= 1)
                                         {
                                             score++;
                                         }
@@ -602,8 +603,8 @@ public class PlaceCards : MonoBehaviour
             {
                 PlayerPrefs.SetInt("MatchingGameProgress", gameObject.GetComponent<CameraMovement>().level);
             }
-            // display score text if on level 6, else set inactive
-            if (gameObject.GetComponent<CameraMovement>().level == 6)
+            // display score text if greater than or equal to level 1, else set inactive
+            if (gameObject.GetComponent<CameraMovement>().level >= 1)
             {
                 ScoreText.SetActive(true);
             }
