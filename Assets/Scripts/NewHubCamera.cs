@@ -108,7 +108,7 @@ public class NewHubCamera : MonoBehaviour
                     }
 
                 //sets the right button to inactive if the player is unable to go right anymore
-                    if(DoorPoint >= 8)
+                    if(DoorPoint >= 1)
                     {
                         cameraReachedMax = true;
                         if(cameraReachedMax == true && cameraReachedPosition == true)

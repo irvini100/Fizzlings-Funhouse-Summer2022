@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Start Menu.unity
     guid: 810a33029d1275e479a33ad1eba3eb4d
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rooms/Hub.unity
     guid: ce6b05eda7c07b24a888ece37a06837a
   - enabled: 0
@@ -30,8 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame Scenes/Hangar Room/Galactic Diplomacy Minigame.unity
     guid: 72dc621194bb91b43bbcb00c3c880e0a
   - enabled: 0
-    path: Assets/Scenes/Minigame Scenes/Music Room/Music Rhythm.unity
-    guid: 92f373d073434a3469b864dcdc9b13d4
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Minigame Scenes/Zoo Room/Animal Sound Trivia.unity
     guid: a142af6ab8ed6054e95bc5e88d1eaece
@@ -56,7 +56,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Minigame Scenes/Ocean Room/Shark Escape Hard.unity
     guid: ca16fbe33e086934b9c148a35648fdbe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rooms/Music Room.unity
     guid: 294e668d359f6fc4a9f68e64aac9da31
   - enabled: 1
@@ -78,21 +78,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame Scenes/Hangar Room/Constellations.unity
     guid: 74f95a746ceeabe4a80115cf9ad70b25
   - enabled: 0
-    path: Assets/Scenes/Minigame Scenes/Library Room/Madlibs.unity
-    guid: aade0e15c8b764843be6e8379266d989
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Minigame Scenes/Library Room/LibaryOrganizer.unity
     guid: 35405ce77a8fbc54da8a9b852b7fdebc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rooms/Art Room.unity
     guid: d84cc7514274d4e42937ea463d24c492
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Minigame Scenes/Art Gallery/GeorgePaintingRemake/PaintingMinigame.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Minigame Scenes/Art Gallery/MatchingGame.unity
     guid: 2a02ff3efd50348438bbf6999fb1b9c8
   - enabled: 0
-    path: Assets/Scenes/Rooms/Zoo.unity
-    guid: 538ac7eddf9624a429bedc5d3ea8d5e0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

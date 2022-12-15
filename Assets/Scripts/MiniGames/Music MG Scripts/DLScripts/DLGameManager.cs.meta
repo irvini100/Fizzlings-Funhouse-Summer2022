@@ -3,7 +3,22 @@ guid: 8a798d22a3a271d45af274028274f581
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - theMusic: {instanceID: 0}
+  - theBS: {instanceID: 0}
+  - resultsScreen: {fileID: 8817630467427676277, guid: 8a90e8c18d5b4cd4394a165e5b150bd8,
+      type: 3}
+  - percentHitText: {instanceID: 0}
+  - normalsText: {instanceID: 0}
+  - goodsText: {instanceID: 0}
+  - perfectsText: {instanceID: 0}
+  - missesText: {instanceID: 0}
+  - rankText: {instanceID: 0}
+  - finalScoreText: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - multiText: {instanceID: 0}
+  - CPUscoreText: {instanceID: 0}
+  - CPUmultiText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

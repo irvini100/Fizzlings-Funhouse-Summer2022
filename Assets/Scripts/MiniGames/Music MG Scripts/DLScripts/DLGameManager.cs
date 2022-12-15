@@ -23,6 +23,8 @@ public class DLGameManager : MonoBehaviour
     public int CPUcurrentMultiplier;
     public int CPUmultiplierTracker;
     public int[] multiplierThresholds;
+   
+   
 
     public Text scoreText;
     public Text multiText;
@@ -31,6 +33,8 @@ public class DLGameManager : MonoBehaviour
     public Text CPUmultiText;
 
     public int cpuNum;
+    public static bool isGameOver;
+    public GameObject GameOverPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +47,8 @@ public class DLGameManager : MonoBehaviour
         CPUcurrentMultiplier = 1;
 
         cpuNum = Random.Range(1, 3);
-
+        isGameOver = false;
+        GameOverPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,18 +64,19 @@ public class DLGameManager : MonoBehaviour
                 // Start playing the game when any key is pressed
                 startPlaying = true;
                 theBS.hasStarted = true; 
-                
-
-            }
-
+                }
         }
-        
+
+        if(isGameOver)
+        {
+            GameOverPanel.SetActive(true);
+        }
     }
 
     public void NoteHit()
     {
 
-        //Debug.Log("Hit On Time");
+        Debug.Log("Hit On Time");
 
         // Will multiply scorePerNote & currentMultiplier to currentScore for normal hit
         currentScore += scorePerNote * currentMultiplier;
@@ -145,27 +151,31 @@ public class DLGameManager : MonoBehaviour
     /*
     public void NormalHit() 
     {
+    
         // Will multiply scorePerNote & currentMultiplier to currentScore for normal hit
         currentScore += scorePerNote * currentMultiplier;
         NoteHit();
-
+      
     }
     public void GoodHit() 
     {
+   
         // Will multiply scorePerGoodNote & currentMultiplier to currentScore for good hit
         currentScore += scorePerGoodNote * currentMultiplier;
         NoteHit();
+        
 
     }
     public void PerfectHit() 
     {
+    
         // Will multiply scorePerNote & currentMultiplier to currentScore for perfect hit
         currentScore += scorePerPerfectNote * currentMultiplier;
         NoteHit();
-
+        
     }
+    
     */
-
 
     public void NoteMissed()
     {
@@ -178,13 +188,13 @@ public class DLGameManager : MonoBehaviour
 
         // Update Multiplier Text
         multiText.text = "Multiplier: x" + currentMultiplier;
-
+       
     }
 
     public void CPUNoteMissed()
     {
 
-        Debug.Log("Missed Note");
+        Debug.Log("CPU Missed Note");
 
         // Set currentMultiplier & multiplier tracker to 0 when a note is missed
         CPUcurrentMultiplier = 1;

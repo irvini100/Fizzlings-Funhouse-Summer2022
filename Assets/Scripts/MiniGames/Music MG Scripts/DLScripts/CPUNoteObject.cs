@@ -50,7 +50,7 @@ public class CPUNoteObject : MonoBehaviour
         {
             // When arrows enter the button boxes, canBePressed becomes true
             canBePressed = true;
-
+            
         }
 
     }
@@ -73,6 +73,7 @@ public class CPUNoteObject : MonoBehaviour
                 // If note is missed DestroyNote will be called
                 StartCoroutine(DestroyNote());
 
+               
             }
         }
 
@@ -84,7 +85,7 @@ public class CPUNoteObject : MonoBehaviour
         // Wait 1 second and then destroy this gameObject
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
-
+        DLGameManager.isGameOver = true;
     }
 
     public void CPUHit()
@@ -92,33 +93,33 @@ public class CPUNoteObject : MonoBehaviour
 
 
 
-        DL.CPUNoteHit();
+       DL.CPUNoteHit();
 
 
 
-
+        
         /*
         if(Mathf.Abs(transform.position.y) > 0.2)
         {
-
+        
             Debug.Log("Hit");
-            GameManager.Instance.NormalHit();
+            DLGameManager.Instance.NormalHit();
 
         } else if (Mathf.Abs(transform.position.y) > -0.2f)
         {
 
             Debug.Log("Good");
-            GameManager.Instance.GoodHit();
+            DLGameManager.Instance.GoodHit();
 
         } else
         {
 
             Debug.Log("Perfect");
-            GameManager.Instance.PerfectHit();
+            DLGameManager.Instance.PerfectHit();
 
         }
+        */
 
-*/
         // If the note is hit by the CPU, the cpuNum will reset based on this Random.Range
         DL.cpuNum = Random.Range(1, 3);
 
@@ -128,6 +129,6 @@ public class CPUNoteObject : MonoBehaviour
         // If canBePressed is true and CPU has hit the note, the arrow object will be destroyed.
         Destroy(this.gameObject);
 
-
+        }
     }
-}
+

@@ -47,37 +47,37 @@ public class HubClicks : MonoBehaviour
                     {
                         SceneManager.LoadScene("Art Room");
                     }                           
-                    else if(hit.collider.tag == "FarmDoor")
+                      else if(hit.collider.tag == "FarmDoor")
                     {
-                        SceneManager.LoadScene("NewZoo");
+                        //SceneManager.LoadScene("NewZoo");
                     }
-                    else if(hit.collider.tag == "HangarDoor")
+                      else if(hit.collider.tag == "HangarDoor")
                     {
-                        SceneManager.LoadScene("Hangar");
+                        //SceneManager.LoadScene("Hangar");
                     }
-                    else if(hit.collider.tag == "MusicDoor")
+                      else if(hit.collider.tag == "MusicDoor")
                     {
                         SceneManager.LoadScene("Music Room");
                     }
-                    else if(hit.collider.tag == "LibraryDoor")
+                      else if(hit.collider.tag == "LibraryDoor")
                     {
-                        SceneManager.LoadScene("Library");
+                          SceneManager.LoadScene("Library");
                     }
-                    else if(hit.collider.tag == "OceanDoor")
+                      else if(hit.collider.tag == "OceanDoor")
                     {
-                        SceneManager.LoadScene("Ocean Room");
+                          SceneManager.LoadScene("Ocean Room");
                     }
-                    else if(hit.collider.tag == "TrophyDoor")
+                      else if(hit.collider.tag == "TrophyDoor")
                     {  
-                        SceneManager.LoadScene("Trophy Room");
+                          SceneManager.LoadScene("Trophy Room");
                     }
-                    else if(hit.collider.tag == "GarageDoor")
+                      else if(hit.collider.tag == "GarageDoor")
                     {
-                        SceneManager.LoadScene("Garage");
+                          SceneManager.LoadScene("Garage");
                     }
-                    else if(hit.collider.tag == "HotAirBalloon")
+                      else if(hit.collider.tag == "HotAirBalloon")
                     {
-                        Debug.Log("You hit the hot air balloon. Nothing else because theres no minigame attached yet");
+                          Debug.Log("You hit the hot air balloon. Nothing else because theres no minigame attached yet");
                     }
                 }
             }

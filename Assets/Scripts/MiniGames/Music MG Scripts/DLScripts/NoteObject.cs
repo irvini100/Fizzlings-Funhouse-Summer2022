@@ -39,23 +39,23 @@ public class NoteObject : MonoBehaviour
                 {
 
                     Debug.Log("Hit");
-                    GameManager.Instance.NormalHit();
+                    DLGameManager.Instance.NormalHit();
 
                 } else if (Mathf.Abs(transform.position.y) > -0.2f)
                 {
 
                     Debug.Log("Good");
-                    GameManager.Instance.GoodHit();
+                    DLGameManager.Instance.GoodHit();
 
                 } else
                 {
 
                     Debug.Log("Perfect");
-                    GameManager.Instance.PerfectHit();
+                    DLGameManager.Instance.PerfectHit();
 
                 }
-
-    */
+                */
+               
 
 
                 DL.NoteHit();
@@ -87,7 +87,7 @@ public class NoteObject : MonoBehaviour
         {
             // When arrows enter the button boxes, canBePressed becomes true
             canBePressed = true;
-
+            
         }
         
     }
@@ -109,10 +109,12 @@ public class NoteObject : MonoBehaviour
 
                 // If note is missed DestroyNote will be called
                 StartCoroutine(DestroyNote());
+                
+
 
             }
         }
-
+       
     }
 
     
@@ -121,7 +123,7 @@ public class NoteObject : MonoBehaviour
         // Wait 1 second and then destroy this gameObject
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
-
+        DLGameManager.isGameOver = true;
     }
 
 }
